@@ -1,2 +1,2 @@
 # RegistrationAndLogin
-A C++ project to develop Registration and login system
+A C++ project to develop registration and login system
