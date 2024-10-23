@@ -62,12 +62,17 @@ void login::Registration()
         }
         f1 << regUser << ' ' << hashPassword << ' ' << securityHash << endl;
         system("clear");
+        #endif
         cout << "\n\t\t\t Registration successful!\n";
         return;
     }
     else
     {
         ifstream input("data.txt");
+        if(!input){
+            cerr<<"Error opening file to reading."<<endl;
+            return;
+        }
         while (input >> regId >> regPass >> regSecure)
         {
             if (regUser == regId)
@@ -152,8 +157,13 @@ void login::DrunkGame()
 
 void login::ForgotPassword()
 {
+    #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
 /*     string forgotChoice, count, secondCount;
-    system("clear");
+    
     cout << "\n\t\t\tPress 1 to enter USERNAME\n";
     cout << "\t\t\tPress 2 to go back to MENU\n";
     cout << "\n\t\t\tEnter choice: ";
