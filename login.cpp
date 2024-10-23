@@ -56,6 +56,10 @@ void login::Registration()
     if (input.tellg() == 0)
     {
         ofstream f1("data.txt", ios::app);
+        if(!f1){
+            cerr<<"Error opening file for writing."<<endl;
+            return;
+        }
         f1 << regUser << ' ' << hashPassword << ' ' << securityHash << endl;
         system("clear");
         cout << "\n\t\t\t Registration successful!\n";
