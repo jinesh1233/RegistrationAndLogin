@@ -62,7 +62,6 @@ void login::Registration()
         }
         f1 << regUser << ' ' << hashPassword << ' ' << securityHash << endl;
         system("clear");
-        #endif
         cout << "\n\t\t\t Registration successful!\n";
         return;
     }
@@ -159,9 +158,9 @@ void login::ForgotPassword()
 {
     #ifdef _WIN32
             system("cls");
-        #else
+    #else
             system("clear");
-        #endif
+    #endif
 /*     string forgotChoice, count, secondCount;
     
     cout << "\n\t\t\tPress 1 to enter USERNAME\n";
